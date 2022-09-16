@@ -1,0 +1,20 @@
+PROGRAM order-online-food
+
+if loggedin = 1
+    GO TO menu
+else
+    GO TO login
+
+FUNCTION login
+    WHILE loggedin = 0
+        READ username
+        READ password
+        if success
+            GO TO main
+END FUNCTION
+
+FUNCTION menu
+    READ menuList
+    CREATE orderMenu
+    PRINT orderMenu
+END FUNCTION
