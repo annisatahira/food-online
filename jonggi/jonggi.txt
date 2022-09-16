@@ -1,0 +1,17 @@
+Program OrderOnlineFood
+if loggedIn = 1
+    GO TO menu
+else GO TO login
+
+FUNCTION login
+    WHILE loggedIn = 0
+    READ username
+    READ password
+    if success
+        GO TO dashboard
+END FUNCTION
+
+FUNCTION menu
+    READ dbListMenu, menu
+    PRINT menu
+END FUNCTION
